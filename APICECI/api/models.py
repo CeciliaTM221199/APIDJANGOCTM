@@ -1,7 +1,7 @@
 from django.db import models
 
 class RegistroU(models.Model):
-    id_registroU = models.IntegerField(primary_key=True, db_column='idGenero')
+    id_registroU = models.AutoField(primary_key=True, db_column='id_registro')
     nombre = models.CharField(max_length=100, db_column='nombre')
     apellidop = models.CharField(max_length=100, db_column='apellidoP')
     apellidom = models.CharField(max_length=100, db_column='apellidoM')
