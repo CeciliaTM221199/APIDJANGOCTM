@@ -3,7 +3,7 @@
 <html>
   <head>
     <style>
-      ..list-group-item {
+      list-group-item {
         transition: background-color 0.3s; /* Agrega una transición suave */
       }
     
@@ -33,6 +33,7 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="{% static "dist/js/site.min.js" %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <!--nav-->
@@ -79,7 +80,7 @@
             <ul class="list-group panel">
                 <li class="list-group-item"><i class="glyphicon glyphicon-align-justify"></i> <b>PANEL DE CONTROL</b></li>
                 <li class="list-group-item"><input type="text" class="form-control search-query" placeholder="Search Something"></li>
-                <li class="list-group-item"><a href="index.html"><i class="glyphicon glyphicon-home"></i>Home </a></li>
+                <li class="list-group-item"><a href="index.html"><i class="glyphicon glyphicon-home"></i>Dashboard </a></li>
                 <li class="list-group-item"><a href=""><i class="glyphicon glyphicon-certificate"></i>Iconos </a></li>
                 <li class="list-group-item"><a href="list.html"><i class="glyphicon glyphicon-th-list"></i>Tablas y listas </a></li>
                 <li class="list-group-item"><a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i>Formularios</a></li>
@@ -121,7 +122,9 @@
                 </li>
               </ul>
           </div>
+          
           <div class="col-xs-12 col-sm-9 content">
+            
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title"><a href="javascript:void(0);" class="toggle-sidebar"><span class="fa fa-angle-double-left" data-toggle="offcanvas" title="Maximize Panel"></span></a> Panel Title</h3>
