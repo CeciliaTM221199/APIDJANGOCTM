@@ -24,3 +24,10 @@ class Encuesta(models.Model):
     class Meta:
         db_table='respuesta'
 
+class Product(models.Model):
+    id = models.IntegerField(primary_key=True, db_column='id')
+    name = models.CharField(max_length=35, db_column='name')
+    price = models.CharField(max_length=100, db_column='price')
+    class Meta:
+        db_table='product'
+

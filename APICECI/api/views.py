@@ -22,6 +22,8 @@ from django.template.loader import render_to_string
 from django.contrib import messages
 from .forms import RegistroForm
 
+from .models import Product
+
 # views.py
 from django.shortcuts import render
 from paypalrestsdk import Payment
@@ -123,56 +125,8 @@ def chart_view(request):
     }
  )
 
+def ProductView(request):
 
+    get_products = Product.objects.all()
 
-def iniciar_pago(request):
-    payment = Payment({
-        "intent": "sale",
-        "payer": {
-            "payment_method": "paypal"
-        },
-        "redirect_urls": {
-            "return_url": request.build_absolute_uri(reverse('pago_exitoso')),
-            "cancel_url": request.build_absolute_uri(reverse('pago_cancelado')),
-        },
-        "transactions": [{
-            "item_list": {
-                "items": [{
-                    "name": "Producto",
-                    "sku": "001",
-                    "price": "10.00",
-                    "currency": "USD",
-                    "quantity": 1
-                }]
-            },
-            "amount": {
-                "total": "10.00",
-                "currency": "USD"
-            },
-            "description": "Descripción del producto"
-        }]
-    })
-
-    if payment.create():
-        for link in payment.links:
-            if link.method == "REDIRECT":
-                redirect_url = str(link.href)
-                return HttpResponseRedirect(redirect_url)
-    else:
-        return render(request, 'pago_error.html', {'error': payment.error})
-
-
-def pago_exitoso(request):
-    payer_id = request.GET.get('PayerID')
-    payment_id = request.GET.get('paymentId')
-
-    payment = Payment.find(payment_id)
-    if payment.execute({"payer_id": payer_id}):
-        # Pago exitoso, puedes realizar acciones adicionales aquí
-        return render(request, 'pago_exitoso.html')
-    else:
-        return render(request, 'pago_error.html', {'error': payment.error})
-
-
-def pago_cancelado(request):
-    return render(request, 'pago_cancelado.html')
+    return render(request, 'products.html', {'products': get_products})
