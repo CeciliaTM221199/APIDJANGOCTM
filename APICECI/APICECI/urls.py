@@ -27,5 +27,8 @@ urlpatterns = [
     path('InserUser/',InserUser.registro, name='insert_user'),
     path('iniciar_sesion/', views.iniciar_sesion, name='iniciar_sesion'),
     path('', views.chart_view, name='chart_view'),
+    path('iniciar_pago/', iniciar_pago, name='iniciar_pago'),
+    path('pago_exitoso/', pago_exitoso, name='pago_exitoso'),
+    path('pago_cancelado/', pago_cancelado, name='pago_cancelado'),
     
 ]

@@ -123,11 +123,11 @@
               </ul>
           </div>
     <!-- PRIMER GRAFICO -->
-    <div>
-      <h3>titulo 1</h3>
+    <div style="position: absolute; top: 5px; left: 20px; text-align: center; width: 250px; background-color: white;">
+      <h6> Gama de colores</h6>
     </div>
-    <div style="position: absolute; top: 250%; transform: translateY(-50%); right: 50; padding: 0 50px;">
-        <canvas id="myChart" style="width: 300px; height: 300px;"></canvas>
+    <div style="position: absolute; top: 50px; left: 20px; background-color: white;">
+        <canvas id="myChart" style="width: 250px; height: 250px;"></canvas>
       <script>
         const ctx = document.getElementById('myChart').getContext('2d');
         new Chart(ctx, {
@@ -137,7 +137,7 @@
             datasets: [{
               label: 'Gama de colores',
               data: [30,50,30],
-              backgroundColor: ['pink', 'cyan', 'purple'],
+              backgroundColor: ['#1AA7ED', '#4ADEDE', '#797EF6'],
               borderWidth: 1
             }]
           },
@@ -159,6 +159,267 @@
         </script>
     </div>
 
+    <!-- SEGUNDO GRAFICO -->
+   
+    <div style="position: absolute; top: 5px; left: 280px; text-align: center; width: 350px; background-color: white;">
+      <h6>Forma de pago preferencial</h6>
+    </div>
+    <div style="position: absolute; top: 50px; left: 280px; background-color: white;">
+       
+        <canvas id="myChart1" style="width: 350px; height: 250px;"></canvas>
+      <script>
+        const ctx1 = document.getElementById('myChart1').getContext('2d');
+        new Chart(ctx1, {
+          type: 'bar',
+          data: {
+            labels: ["Efectivo", "Tarjeta", "Transferencia"],
+            datasets: [{
+              label: 'Resultados',
+              data: [20,50,30],
+              backgroundColor: ['#797EF6'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                        
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
+
+    <!-- TERCER GRAFICO -->
+   
+    <div style="position: absolute; top: 5px; left: 640px; text-align: center; width: 350px; background-color: white;">
+      <h6>Frecuencia de compra en línea</h6>
+    </div>
+    <div style="position: absolute; top: 50px; left: 640px; background-color: white;">
+       
+        <canvas id="myChart3" style="width: 350px; height: 250px;"></canvas>
+      <script>
+        const ctx3 = document.getElementById('myChart3').getContext('2d');
+        new Chart(ctx3, {
+          type: 'polarArea',
+          data: {
+            labels: ["Una vez al mes", "Cada seis meses", "Cada año", "No realizo"],
+            datasets: [{
+              label: 'Resultados',
+              data: [20,40,30,10],
+              backgroundColor: ['#1AA7ED', '#4ADEDE', '#797EF6','#172C51'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                        
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
   
+    <!-- CUARTO GRAFICO -->
+    <div style="position: absolute; top: 5px; left: 1000px; text-align: center; width: 250px; background-color: white;">
+      <h6> Dispositivo para realizar compras</h6>
+    </div>
+    <div style="position: absolute; top: 50px; left: 1000px; background-color: white;">
+        <canvas id="myChart4" style="width: 250px; height: 250px;"></canvas>
+      <script>
+        const ctx4 = document.getElementById('myChart4').getContext('2d');
+        new Chart(ctx4, {
+          type: 'pie',
+          data: {
+            labels: ["Celular", "computadora", "Tablet"],
+            datasets: [{
+              label: 'Gama de colores',
+              data: [60,25,15],
+              backgroundColor: ['#1AA7ED', '#4ADEDE', '#797EF6'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
+
+    <!-- QUINTO GRAFICO -->
+   
+    <div style="position: absolute; top:320px; left: 20px; text-align: center; width: 430px; background-color: white;">
+      <h6>Tiempo de navegación en Ecommerce</h6>
+    </div>
+    <div style="position: absolute; top: 360px; left: 20px; background-color: white;">
+       
+        <canvas id="myChart5" style="width: 430px; height: 250px;"></canvas>
+      <script>
+        const ctx5 = document.getElementById('myChart5').getContext('2d');
+        new Chart(ctx5, {
+          type: 'polarArea',
+          data: {
+            labels: ["< 15 minutos", "Entre 15 y 30 minutos", "Entre 15 y 1 hora", "> 1 hora"],
+            datasets: [{
+              label: 'Resultados',
+              data: [27,36,25,12],
+              backgroundColor: ['#1AA7ED', '#4ADEDE', '#797EF6','#172C51'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                        
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
+
+    <!-- SEXTO GRAFICO -->
+   
+    <div style="position: absolute; top:320px; left: 720px; text-align: center; width: 270px; background-color: white;">
+      <h6>Preferencia de correo electronico</h6>
+    </div>
+    <div style="position: absolute; top: 360px; left: 720px; background-color: white;">
+       
+        <canvas id="myChart6" style="width: 270px; height: 250px;"></canvas>
+      <script>
+        const ctx6 = document.getElementById('myChart6').getContext('2d');
+        new Chart(ctx6, {
+          type: 'bar',
+          data: {
+            labels: ["Si", "No"],
+            datasets: [{
+              label: 'Resultados', 
+              data: [36,64],
+              backgroundColor: ['#1AA7ED'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                        
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
+
+    <!-- SEXTO GRAFICO -->
+   
+    <div style="position: absolute; top:320px; left: 1000px; text-align: center; width: 250px; background-color: white;">
+      <h6>Servicio de mensajería</h6>
+    </div>
+    <div style="position: absolute; top: 360px; left: 1000px; background-color: white;">
+       
+        <canvas id="myChart7" style="width: 250px; height: 250px;"></canvas>
+      <script>
+        const ctx7 = document.getElementById('myChart7').getContext('2d');
+        new Chart(ctx7, {
+          type: 'doughnut',
+          data: {
+            labels: ["RedPack", "Estafeta", "FedEx"],
+            datasets: [{
+              label: 'Resultados', 
+              data: [20,20,40],
+              backgroundColor: ['#1AA7ED', '#4ADEDE', '#797EF6'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                      legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
+
+     <!-- OCTAVO GRAFICO -->
+   
+     <div style="position: absolute; top:320px; left: 460px; text-align: center; width: 250px; background-color: white;">
+      <h6>Atención personalizada por Email</h6>
+    </div>
+    <div style="position: absolute; top: 360px; left: 460px; background-color: white;">
+       
+        <canvas id="myChart8" style="width: 250px; height: 250px;"></canvas>
+      <script>
+        const ctx8 = document.getElementById('myChart8').getContext('2d');
+        new Chart(ctx8, {
+          type: 'pie',
+          data: {
+            labels: ["Si", "No"],
+            datasets: [{
+              label: 'Resultados', 
+              data: [78,22],
+              backgroundColor: ['#4ADEDE','#1AA7ED'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+                    plugins: {
+                      legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Título de la Gráfica'
+                    },
+                    
+                }
+            });
+        </script>
+    </div>
 </body>
 </html>

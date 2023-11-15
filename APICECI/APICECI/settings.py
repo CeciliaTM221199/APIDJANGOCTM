@@ -146,3 +146,8 @@ DATABASES = {
         'PORT': '5432',           # Deja en blanco para el valor predeterminado (5432)
     }
 }
+
+#PAYPAL
+PAYPAL_CLIENT_ID = 'Aa28SzURKgSGhzc0CrktDLYut44zVSm8B3lxz5CXjvTSzk9ALowo5UExrVZ_rVn3sn6TosUQLG0xR7Kl'
+PAYPAL_CLIENT_SECRET = 'EJUfiq1bdkrF9U1Q3N4_F5DsjiGYaB0xKnqebE_-sVAq2Sqoylr79DMgtjSTDmUaiJDSsQVcqba2d2HG'
+PAYPAL_MODE = 'sandbox'  # 'sandbox' para pruebas, 'live' para producción
