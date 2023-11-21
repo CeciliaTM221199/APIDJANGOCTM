@@ -85,7 +85,7 @@ class InserUser(HttpRequest):
                 from_email = 'ceciliatm221199@gmail.com'
                 recipient_list = [email]
                 contexto = {'email': email, 'contra': contra}
-                contenido_correo = render_to_string('correo.html', contexto)
+                contenido_correo = render_to_string('email.html', contexto)
                 send_mail(subject, '', from_email, recipient_list, html_message=contenido_correo)
 
             return redirect('iniciar_sesion')
@@ -123,10 +123,7 @@ def chart_view(request):
         'gama2': gama2,
         'gama3': gama3,
     }
- )
+)
 
-def ProductView(request):
 
-    get_products = Product.objects.all()
-
-    return render(request, 'products.html', {'products': get_products})
+ 
